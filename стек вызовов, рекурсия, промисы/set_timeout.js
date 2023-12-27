@@ -1,5 +1,5 @@
 // setTimeout() и setInterval()
-// setTimeout() и setInterval() - это функции в JavaScript для работы с асинхронными операциями времени.
+// setTimeout() и setInterval() - это функции, циклы, упр. конструкции в JavaScript для работы с асинхронными операциями времени.
 //
 // setTimeout(callback, delay) вызывает функцию callback через delay миллисекунд.
 // setInterval(callback, interval) вызывает функцию callback каждые interval миллисекунд.

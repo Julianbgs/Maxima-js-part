@@ -15,5 +15,5 @@ function isPrime(number) {
     return true;
 }
 
-const res = isPrime(17)
+const res = isPrime(9)
 console.log(res);
