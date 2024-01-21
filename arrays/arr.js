@@ -11,6 +11,9 @@ const resultSecond = arrNums.map(function (item, index) {
     return item * 2;
 })
 
+// console.log(resultFirst);
+// console.log(resultSecond, arrNums);
+
 // function callbackWrapper(arg,callback) {
 //     //
 //     callback(arg);
@@ -35,6 +38,11 @@ const arrObjects = [
         name: 'Fu',
         age: 56,
         id: 31
+    },
+    {
+        name: 'Fu Ton',
+        age: 45,
+        id: 31
     }
 
 ]
@@ -42,7 +50,7 @@ const arrObjects = [
 let newObjectsWithFlag = arrObjects.map(item => {
     return {
         ...item,
-        flag: false
+        flag: false // hover flag = true
     }
 })
 
@@ -50,13 +58,22 @@ let newObjectsWithFlag = arrObjects.map(item => {
 
 // filter
 
-newObjectsWithFlag = newObjectsWithFlag.filter(function (item) {
-    return item.id !== 31
+let searchElem = newObjectsWithFlag.filter(function (item) {
+    return item.id === 31
 })
 
-// searchElem[0].flag = true;
+// searchElem = searchElem.map(human => {
+//     return  {flag: true, name: `${human.name} Rex yr`}
+// })
 
-// console.log(newObjectsWithFlag);
+// let newArray = newObjectsWithFlag.concat(searchElem)
+
+
+searchElem.forEach(item => {
+    item.flag = true;
+})
+
+console.log(newObjectsWithFlag);
 
 // console.log(res);
 
@@ -79,9 +96,9 @@ newObjectsWithFlag = newObjectsWithFlag.filter(function (item) {
 // const rotatedArray = rotateArray(originalArray, k);
 // console.log(rotatedArray); // Вывод: [4, 5, 1, 2, 3]
 
-const testArr = [1,2,3,7]
-const reduce =  testArr.reduce((acc, val) => {
-    return acc + val
-})
-
-console.log(reduce);
+// const testArr = [1,2,3,7]
+// const reduce =  testArr.reduce((acc, val) => {
+//     return acc + val
+// })
+//
+// console.log(reduce);

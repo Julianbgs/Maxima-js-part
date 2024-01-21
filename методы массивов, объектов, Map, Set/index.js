@@ -1,25 +1,27 @@
 //ARRAY
-// const arr = [1,2,3,4,5];
-// const fruits = ['banana', 'kiwi']
-// // arr.push(8)
-// // console.log(arr);
-// // arr.pop();
-// // console.log(arr);
-// // arr.unshift(100);
-// // console.log(arr);
-// // arr.shift();
-// // console.log(arr);
-// //
-// // const each = arr.forEach((item, index) => {
-// //      console.log(item);
-// //      return item
-// // })
-// //
-// // const map = arr.map((item, index) => {
-// //     console.log(item);
-// //     return item
-// // })
-// //
+const arr = [1,2,3,4,5, 'test'];
+const fruits = ['banana', 'kiwi']
+console.log(arr);
+arr.push(8)
+console.log(arr);
+arr.pop();
+console.log(arr);
+arr.unshift(100);
+console.log(arr);
+arr.shift();
+console.log(arr);
+
+const each = arr.forEach((item, index) => {
+     console.log(item);
+     return item + 1
+})
+console.log(each);
+const map = arr.map((item, index) => {
+    console.log(item);
+    return item + 1
+})
+console.log(map);
+
 // const allElems = arr.concat(fruits);
 // // console.log(allElems);
 //

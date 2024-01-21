@@ -12,23 +12,23 @@ let firstLetter = 'Hello';
 let secondLetter = 'World!';
 const year = 2023;
 const birthday = '2023'
-// console.log(`${firstLetter} ${secondLetter}`);
-// console.log(firstLetter  ,secondLetter);
+// console.log(`${year}  ${birthday}`);
+// console.log(secondLetter - year);
 
 // операторы: +,-,/,*,^
 // логические операторы &&, || (condition1 && condition2)
 // тернарный опертор (condition ? 6 : 10)
 // условные опреторы if, else, else if
 
-const num1 = 4;
+const num1 = 0;
 let num2 = 10;
 
 // console.log(Math.sqrt(120));
 
 // приведение типов
-// console.log('null' ? 10 : 4);
+console.log(num2 ? 10 === 10 ? 2 : 8 : 4);
 
-if ('null') {
+if (num2) {
     console.log(10);
 } else {
     console.log(4);
@@ -36,7 +36,7 @@ if ('null') {
 
 //условные операторы + опреторы сравнения (строгое -> ===, не строгое -> ==)
 
-const num3 = 3;
+// const num3 = 3;
 let num4 = 0;
 if (num4 === 3) {
     console.log('hi');
