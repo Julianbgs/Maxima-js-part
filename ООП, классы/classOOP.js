@@ -18,6 +18,7 @@ class Person {
     }
 }
 
+
 class Employee extends Person {
     constructor(name, age, role) {
         super(name, age); // Вызываем конструктор суперкласса
@@ -64,7 +65,7 @@ person.sayHello();        // Вывод: "Hello, my name is Alice and I'm 30 yea
 const employee = new Employee('Bob', 25, 'Developer');
 console.log(employee.name);   // Вывод: "Bob"
 console.log(employee.age);    // Вывод: 25
-console.log(employee.role);   // Вывод: "Developer"
+console.log(employee.getRole());   // Вывод: "Developer"
 employee.sayHello();
 //
 const animal = new Animal('Unknown');

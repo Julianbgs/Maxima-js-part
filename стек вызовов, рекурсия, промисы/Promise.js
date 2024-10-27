@@ -13,20 +13,23 @@
 //         reject("Ошибка!");
 //     }
 // });
-// const testPromise = new Promise((resolve, reject) => {
-//     // setTimeout(() => {
-//     //     resolve()
-//         reject(`${new Date().toLocaleString()} -> Ошибка сервера`)
-//     // }, 1000)
-//
-//     // reject('Ошибка')
-// })
+const testPromise = new Promise((resolve, reject) => {
+    // setTimeout(() => {
+        resolve('OK')
+        // reject(`${new Date().toLocaleString()} -> Ошибка сервера`)
+    // }, 1000)
 
-// testPromise.then((result) => {
-//     console.log(result);
-// }).catch((error) => {
-//     console.log(error);
-// })
+    // reject('Ошибка')
+})
+
+testPromise.then((result) => {
+    console.log(result);
+    return 'test'
+}).then(res => {
+    console.log(res);
+}).catch((error) => {
+    console.log(error);
+})
 
 // const errServer = 500;
 // testPromise.then(res => {
@@ -38,30 +41,30 @@
 //
 // })
 // Рассмотрим пример асинхронной операции с использованием setTimeout, который создаст промис для имитации асинхронного запроса.
-function fetchData() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            const randomNumber = Math.random();
-            if (randomNumber > 0.5) {
-                resolve(`Данные получены: ${randomNumber}`);
-            } else {
-                reject(`Ошибка при получении данных: ${randomNumber}`);
-            }
-        }, 1000); // Задержка в 1 секунду
-    });
-}
-
+// function fetchData() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             const randomNumber = Math.random();
+//             if (randomNumber > 0.5) {
+//                 resolve(`Данные получены: ${randomNumber}`);
+//             } else {
+//                 reject(`Ошибка при получении данных: ${randomNumber}`);
+//             }
+//         }, 1000); // Задержка в 1 секунду
+//     });
+// }
 //
-fetchData()
-    .then(result => {
-        console.log(result);
-        return  fetchData()
-    }).then(result => {
-    console.log(result);
-    })
-    .catch(error => {
-        console.error(error); // Ошибка
-    });
+// //
+// fetchData()
+//     .then(result => {
+//         console.log(result);
+//         return  fetchData()
+//     }).then(result => {
+//     console.log(result);
+//     })
+//     .catch(error => {
+//         console.error(error); // Ошибка
+//     });
 
 // Цепочки промисов (Chaining Promises)
 
@@ -81,25 +84,25 @@ fetchData()
 //         console.error(error);
 //     });
 
-
-function fetchUserData(userId) {
-    return fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
-        .then(response => response.json());
-}
-
-function fetchUserPosts(userId) {
-    return fetch(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`)
-        .then(response => response.json());
-}
-
-fetchUserData(1)
-    .then(user => {
-        console.log('User:', user);
-        return fetchUserPosts(user.id);
-    })
-    .then(posts => {
-        console.log('Posts:', posts);
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
+//
+// function fetchUserData(userId) {
+//     return fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
+//         .then(response => response.json());
+// }
+//
+// function fetchUserPosts(userId) {
+//     return fetch(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`)
+//         .then(response => response.json());
+// }
+//
+// fetchUserData(1)
+//     .then(user => {
+//         console.log('User:', user);
+//         return fetchUserPosts(user.id);
+//     })
+//     .then(posts => {
+//         console.log('Posts:', posts);
+//     })
+//     .catch(error => {
+//         console.error('Error:', error);
+//     });
