@@ -2,7 +2,7 @@ import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 module.exports = {
-    entry: './src/index.js',
+    entry: './src/copy.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
